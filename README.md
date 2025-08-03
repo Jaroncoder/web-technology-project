@@ -9,8 +9,6 @@ This is a simple HTML project created as a **lab exercise** to understand how to
 To demonstrate how to:
 - Use image mapping in HTML (`<map>` and `<area>`)
 - Define multiple clickable shapes: `rect`, `circle`, and `poly`
-- Trigger popup boxes using simple JavaScript
-- Deploy a basic HTML site on GitHub Pages
 
 ---
 
@@ -42,8 +40,7 @@ Clicking on each mapped area shows a **popup box** with more info about that ins
 ## 🚀 Live Demo
 
 Check out the live version here:  
-👉 [https://your-username.github.io/your-repo-name](https://your-username.github.io/your-repo-name)  
-*(Replace with your actual link)*
+👉 https://jaroncoder.github.io/web-technology-project/
 
 ---
 
