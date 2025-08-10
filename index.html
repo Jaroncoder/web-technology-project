@@ -4,22 +4,68 @@
   <meta charset="UTF-8">
   <title>My Music Setup</title>
   <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #0f0f0f, #1a1a1a);
+      color: #f0f0f0;
+      text-align: center;
+      margin: 0;
+      padding: 20px;
+    }
+    h2 {
+      color: #FFD700; /* Gold accent */
+      font-size: 2em;
+      margin-bottom: 10px;
+    }
+    p {
+      font-size: 1.1em;
+      margin-bottom: 20px;
+    }
+    img {
+      max-width: 80%;
+      height: auto;
+      border: 3px solid #FFD700;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.7);
+    }
     .popup {
       display: none;
       position: fixed;
       top: 30%;
       left: 50%;
       transform: translate(-50%, -30%);
-      background-color: white;
-      border: 2px solid black;
+      background-color: #222;
+      border: 2px solid #FFD700;
       padding: 20px;
       z-index: 10;
+      color: white;
+      font-size: 1.1em;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.8);
+    }
+    button {
+      background-color: #FFD700;
+      color: #000;
+      border: none;
+      padding: 8px 14px;
+      margin-top: 10px;
+      cursor: pointer;
+      font-weight: bold;
+      border-radius: 5px;
+    }
+    button:hover {
+      background-color: #e6c200;
+    }
+    .nav-btn {
+      margin-top: 30px;
+      padding: 10px 20px;
+      font-size: 1em;
     }
   </style>
 </head>
 <body>
 
-  <h2>🎶 My Music Gear Setup</h2>
+  <h2>My Music Gear Setup</h2>
   <p>Click an instrument to learn more!</p>
 
   <img src="musician-setup.jpg" alt="Music Setup" usemap="#musicmap">
@@ -29,22 +75,23 @@
     <area shape="poly" coords="1173,241,1112,250,1050,263,1003,294,972,346,957,400,967,452,984,519,997,586,987,656,908,804,866,906,864,1023,1020,1023,1162,1020,1343,1021,1535,1015,1534,777,1535,670,1507,614,1507,586,1510,552,1518,517,1529,486,1534,461,1533,423,1533,370,1526,338,1497,298,1444,260,1386,248" alt="Guitar" onclick="showPopup('guitar')">
   </map>
 
-  <div id="keyboard" class="popup">🎹 This is my keyboard setup.<br><button onclick="closePopup()">Close</button></div>
-  <div id="mic" class="popup">🎤 This is my microphone.<br><button onclick="closePopup()">Close</button></div>
-  <div id="guitar" class="popup">🎸 This is my guitar setup.<br><button onclick="closePopup()">Close</button></div>
+  <div id="keyboard" class="popup"><b>Keyboard:</b> This is my keyboard setup.<br><button onclick="closePopup()">Close</button></div>
+  <div id="mic" class="popup"><b>Microphone:</b> This is my microphone.<br><button onclick="closePopup()">Close</button></div>
+  <div id="guitar" class="popup"><b>Guitar:</b> This is my guitar setup.<br><button onclick="closePopup()">Close</button></div>
 
   <script>
     function showPopup(id) {
-      closePopup(); // hide others first
+      closePopup();
       document.getElementById(id).style.display = 'block';
     }
-
     function closePopup() {
       document.getElementById('keyboard').style.display = 'none';
       document.getElementById('mic').style.display = 'none';
       document.getElementById('guitar').style.display = 'none';
     }
   </script>
+
+  <button class="nav-btn" onclick="location.href='secondpage.html'">Go to Gear & Gigs</button>
 
 </body>
 </html>
